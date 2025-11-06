@@ -7,6 +7,6 @@ resource "aws_instance" "example" {
   instance_type = "t2.micro"
   subnet_id = "subnet-0484ed14577ad95f8"
   tags = {
-    Name = "my-web-server"
+    Name = "my-web"
   }
 }

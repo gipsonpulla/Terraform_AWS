@@ -23,6 +23,6 @@ resource "local_file" "file-ex-obj" {
 }
 
 resource "local_file" "file_name_con" {
-    filename = "files/gipson_file_con.txt"
-    content = "Demo file content"
+  filename = "files/gipson_file_con.txt"
+  content  = "Demo file content"
 }

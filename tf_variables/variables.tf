@@ -68,21 +68,21 @@ variable "file-content-obj" {
     enabled = bool
   })
   default = {
-    name = "gipson"
-    age  = "39"
-    tags = ["swe", "husband"]
+    name    = "gipson"
+    age     = "39"
+    tags    = ["swe", "husband"]
     enabled = true
   }
 }
 
 variable "file_name" {
-    type = string
-    default = "files/gipson_file.txt"
-    description = "The sample file name"
-    validation {
-      condition = length(var.file_name) > 5
-      error_message = "The file name must be more that 55 characters"
-    }
-    sensitive = true 
-    nullable = false
+  type        = string
+  default     = "files/gipson_file.txt"
+  description = "The sample file name"
+  validation {
+    condition     = length(var.file_name) > 5
+    error_message = "The file name must be more that 55 characters"
+  }
+  sensitive = true
+  nullable  = false
 }

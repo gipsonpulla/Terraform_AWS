@@ -23,5 +23,5 @@ resource "aws_instance" "first" {
 
 resource "local_file" "demo" {
   filename = "tfdemo.tx"
-  content = "demo file"
+  content  = "demo file"
 }

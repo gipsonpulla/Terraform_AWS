@@ -16,9 +16,27 @@ resource "aws_s3_object" "bucket1" {
     key = "hello.txt"
 }
 
+data "aws_s3_bucket_policy" "finance-policy" {
+    #group_name = "finance-developers"
+}
+
 resource "aws_s3_bucket_policy" "bucket1-policy" {
     bucket = aws_s3_bucket.bucket1.id
     policy = <<EOF
-
+    {
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+        "Action": "*",
+        "Effect": "Allow",
+        "Resource": "arn:aws:s3:::&{aws_s3_bucket.bucket1.id}/*",
+        "Principal": {
+            "AWS": [
+                "${data.aws_s3_bucket_policy.finance-policy.arn}
+            ]
+        }
+        }
+    ]
+    }
     EOF
 }

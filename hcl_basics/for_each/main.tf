@@ -1,7 +1,7 @@
 resource "local_file" "Sunday" {
-    filename = each.value
-    for_each = toset(var.filename)
-    source = "/tmp/hello.txt"
+  filename = each.value
+  for_each = toset(var.filename)
+  source   = "/tmp/hello.txt"
 }
 
 output "days" {

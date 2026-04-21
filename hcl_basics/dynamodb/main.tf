@@ -11,7 +11,7 @@ resource "aws_dynamodb_table" "cars" {
 resource "aws_dynamodb_table_item" "car-items" {
   table_name = "aws_dynamodb_table.cars.name"
   hash_key   = "aws_dynamodb_table.cars.hash_key"
-  item = <<EOF
+  item       = <<EOF
     {
     "manufacturer": {"S": "Toyota"},
     "Make": {"S": "Corolla"},

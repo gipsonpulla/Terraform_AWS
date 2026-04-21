@@ -1,16 +1,16 @@
 variable "ami" {
-    type = string
+  type = string
 }
 variable "payroll_data" {
-    default = "payroll_data123a"
-  
+  default = "payroll_data123a"
+
 }
 
 variable "bucket" {
-    default = "asfsfsdfdsfsd"
-  
+  default = "asfsfsdfdsfsd"
+
 }
 
 variable "app_region" {
-    type = string
+  type = string
 }

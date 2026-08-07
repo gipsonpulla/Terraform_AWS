@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "my-state" {
-  bucket = "mygipson-state"
+  bucket        = "mygipson-state"
   force_destroy = true
 
   lifecycle {

@@ -1,5 +1,5 @@
 name: Terraform Validate
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+run-name: ${{ github.actor }} is testing out Terraform validation 🚀
 on:
   push:
     branches:

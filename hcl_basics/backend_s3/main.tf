@@ -1,3 +1,4 @@
+#backend config
 terraform {
   backend "s3" {
     bucket       = "gips-tf-backend-state0912092321"
